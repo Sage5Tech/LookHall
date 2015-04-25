@@ -1,0 +1,25 @@
+﻿body {
+    background-color:black;
+}
+.imagecontainer{
+    background:no-repeat;
+    border:1px solid;
+
+}
+.label label-danger{
+    font-size:large;
+    font-stretch:extra-expanded;
+}
+
+.row{
+    border:1px dotted;
+    padding:40px 40px 40px 40px;
+    background-color:royalblue;
+    
+}
+span{
+   display: inline-block;
+max-width: 100%;
+margin-bottom: 5px;
+font-weight:bold;
+}
