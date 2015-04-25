@@ -10,6 +10,7 @@ using Website.Models;
 
 namespace Website.Controllers
 {
+    [Authorize]
     public class AreaController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

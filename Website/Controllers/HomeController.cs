@@ -10,9 +10,11 @@ using Website.Models;
 
 namespace Website.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        [AllowAnonymous]
         public ActionResult Index()
         {
             SetViewBags();
@@ -31,6 +33,17 @@ namespace Website.Controllers
                 var hallType = db.HallTypes.Find(query);
                 var halls = db.Halls.Include(m => m.HallTypes).ToList();
                 result = result.Union(data.Where(m => data.Any(x => halls.Any(w => w.HallTypes.Contains(hallType)) == true))).ToList();
+            }
+
+            if (Request.QueryString["PriceRange"] != null)
+            {
+                var query = Request.QueryString["PriceRange"].Split('-');
+                var queryList = new List<int>();
+                foreach (var item in query)
+                {
+                    queryList.Add(int.Parse(item));
+                }
+                result = result.Where(x => x.Halls.Any(m => m.Price > queryList.Min() && m.Price < queryList.Max())).ToList();
             }
             //ViewBag.HallCategory = new SelectList(db.cate.ToList(), "Id", "Name");
             //ViewBag.PriceRange = new SelectList()
