@@ -15,9 +15,15 @@
 
     <br />
     <br />
+    </div>
     <div class="row row">
-
-        <h1>LOOKHALL.COM</h1>
+        <br />
+        <br />
+        
+        <div class="form-inline col-lg-12">
+            
+            <h1>LOOK HALL AND BOOK HALL JUST A CLICK AWAY</h1>
+        </div>
         <br />
         <br />
         @using (Html.BeginForm("Index", "Home", FormMethod.Get))
@@ -35,10 +41,11 @@
 
                 <div class="form-group col-sm-4 ">
                     <label>PriceRange</label>
-                    <select name="PriceRange" id ="PriceRange" class = "form-control">
-                        <option value="5000-1000">5000-1000</option>
-                        <option value="11000-15000">11000-15000</option>
-                        <option value="20000-25000">20000-25000</option>
+                    <select name="PriceRange" id ="PriceRange" >
+             
+                        <option value="50000-1000000">50000-1000000 RS</option>
+                        <option value="1000000-2000000">1000000-2000000 RS</option>
+                        <option value="2000000-3000000">2000000-3000000 RS</option>
                     </select>
                     @*//@Html.DropDownList("PriceRange")*@
                     <br />
@@ -101,4 +108,4 @@
         </table>
     }}
 
-</div>
+

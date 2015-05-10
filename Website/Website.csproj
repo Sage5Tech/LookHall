@@ -210,12 +210,14 @@
     <Content Include="Content\assets\searchcss.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\collagee copy2.jpg" />
+    <Content Include="Content\hallimg.jpg" />
     <Content Include="Content\indexcss.css" />
+    <Content Include="Content\LookHall2 copy.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\background.jpg" />
     <Content Include="pizap.com14296032424251.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
